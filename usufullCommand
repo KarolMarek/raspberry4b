@@ -1,0 +1,3 @@
+libcamera-still -o smaller1.jpg
+sudo raspi-config
+sudo reboot
