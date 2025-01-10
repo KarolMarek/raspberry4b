@@ -1,0 +1,6 @@
+libcamera-still -o smaller1.jpg
+sudo raspi-config
+sudo reboot
+
+git config --global user.name "karol"
+git config --global user.email "karol@example.com"
