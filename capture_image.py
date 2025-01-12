@@ -1,17 +1,24 @@
-import cv2
-from picamera2 import Picamera2, Preview
+#!/usr/bin/python3
 
-picam2 = Picamera2(verbose_console=0)
-picam2.configure(picam2.create_preview_configuration(main={'format': 'RGB888', 'size': (640, 480)}))
-picam2.start_preview(Preview.NULL)
+# Use the configuration structure method to do a full res capture.
+
+import time
+
+from picamera2 import Picamera2
+
+picam2 = Picamera2()
+
+# We don't really need to change anyhting, but let's mess around just as a test.
+
+capture_config = picam2.create_still_configuration(main={"size":(3280, 2464)})
+picam2.configure(capture_config)
+
+# picam2.still_configuration.format = "YUV420"
+# picam2.still_configuration.size = (3280, 2464)
+# picam2.still_configuration.enable_raw()
+#picam2.still_configuration.raw.size = picam2.sensor_resolution
+
 picam2.start()
-#picam2.set_controls({'AfMode': 1, 'AfTrigger': 1}) # Continuous autofocus
 
-cv2.startWindowThread()
-cv2.namedWindow('Camera', flags=cv2.WINDOW_GUI_NORMAL) # Mandatory to hide CV2 toolbar
-while True:
-    im = picam2.capture_array()
-    cv2.imshow("Camera", im)
-    cv2.waitKey(1)
-
-cv2.destroyAllWindows()
+#capture_file
+picam2.capture_file("test_full.jpg")
