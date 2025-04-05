@@ -1,9 +1,0 @@
-libcamera-still -o smaller1.jpg
-sudo raspi-config
-sudo reboot
-
-git config --global user.name "karol"
-git config --global user.email "karol@example.com"
-
-sudo apt install python3-flask
-sudo apt install python3-picamera2

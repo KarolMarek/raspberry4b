@@ -1,0 +1,24 @@
+libcamera-still -o smaller1.jpg
+sudo raspi-config
+sudo reboot
+sudo apt-get upgrade
+sudo apt-get update
+
+git config --global user.name "karol"
+git config --global user.email "karol@example.com"
+
+sudo apt install python3-flask
+sudo apt install python3-picamera2
+sudo apt install libcamera-apps
+udo apt install --reinstall libpisp   libpisp-common
+
+ldd /usr/lib/aarch64-linux-gnu/libcamera.so.0.3.1
+
+command?:
+[0:34:41.451335148] [3800]  INFO Camera camera.cpp:1197 configuring streams: (0) 3280x2464-YUV420 (1) 3280x2464-SBGGR10_CSI2P
+[0:34:41.458342723] [3803]  INFO RPI vc4.cpp:622 Sensor: /base/soc/i2c0mux/i2c@1/imx219@10 - Selected sensor format: 3280x2464-SBGGR10_1X10 - Selected unicam format: 3280x2464-pBAA
+Still capture image received
+
+
+[1:09:39.905306366] [4816]  INFO Camera camera.cpp:1197 configuring streams: (0) 3280x2464-YUV420 (1) 3280x2464-SBGGR10_CSI2P
+[1:09:39.909636833] [4809]  INFO RPI vc4.cpp:622 Sensor: /base/soc/i2c0mux/i2c@1/imx219@10 - Selected sensor format: 3280x2464-SBGGR10_1X10 - Selected unicam format: 3280x2464-pBAA
