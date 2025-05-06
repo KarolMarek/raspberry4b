@@ -4,6 +4,8 @@ import numpy as np
 from picamera2 import Picamera2, Preview
 from matplotlib import pyplot as plt
 
+### capturing imgage test1.jpg
+
 # RGB_FORMATS = {"BGR888", "RGB888", "XBGR8888", "XRGB8888", "RGB161616", "BGR161616"}
 main = {'size': (1640, 1232), 'format': 'XBGR8888'}  # or BGR888
 
