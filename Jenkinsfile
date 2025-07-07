@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                python3 test_gpio_1.py
+                python3 test_pipeline.py
                 '''
             }
         }
